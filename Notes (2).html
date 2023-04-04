@@ -1,0 +1,2190 @@
+<html lang="en">
+
+<head>
+    <title>Notes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet" />
+
+    <!-- style -->
+    <style>
+        .header {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin: 0 20px 30px 20px;
+        }
+
+        .typo-12 {
+            font-size: 12px !important;
+            font-weight: 400;
+        }
+
+        .text-bold {
+            font-weight: bold !important;
+        }
+
+        .report-table table,
+        .report-table th,
+        .report-table td {
+            border-collapse: collapse;
+            padding: 3px;
+            min-width: 70px;
+        }
+
+        .report-table .ytd td:last-child {
+            padding: 0 0 0 10px;
+        }
+
+        .report-table .ytd td:last-child div {
+            padding: 3px;
+            width: 100%;
+            min-width: 70px;
+        }
+
+        .report-table .ytd-total td:last-child {
+            padding: 0 0 0 10px;
+            background: transparent;
+            border: none;
+        }
+
+        .report-table .ytd-total td:last-child div {
+            background: "#f4f5f6";
+            padding: 3px;
+            min-width: 70px;
+        }
+
+        .report-table .statement-ytd td:nth-child(6) {
+            padding: 0 0 0 10px;
+        }
+
+        .report-table .statement-ytd td:nth-child(6) div {
+            padding: 3px;
+            width: 100%;
+            min-width: 70px;
+        }
+
+        .report-table .statement-ytd-total td:nth-child(6) {
+            padding: 0 0 0 10px;
+            background: transparent;
+            border: none;
+        }
+
+        .report-table .statement-ytd-total td:nth-child(6) div {
+            padding: 3px;
+            min-width: 70px;
+        }
+
+        .report-table .first-cell {
+            width: fit-content;
+            white-space: nowrap;
+        }
+
+        .report-table .border {
+            border: 1px solid #b1b5c3;
+        }
+
+        .report-table .border-t-b {
+            border-top: 1px solid #b1b5c3;
+            border-bottom: 1px solid #b1b5c3;
+        }
+
+        .report-table .header td {
+            text-align: center;
+        }
+
+        .report-table .parent td {
+            height: 40px;
+            vertical-align: bottom;
+        }
+
+        .report-table .sub-account td {
+            padding-left: 15px;
+        }
+
+        .report-table .ais-account td {
+            padding-left: 30px;
+        }
+
+        .typo-11 {
+            font-size: 11px !important;
+            font-weight: 400;
+        }
+
+        .pt-4 {
+            padding-top: 1rem;
+        }
+
+        .gap-5 {
+            gap: 1.25rem;
+        }
+
+        .flex-col {
+            flex-direction: column;
+        }
+
+        .w-full {
+            width: 100%;
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        .pl-5 {
+            padding-left: 20px !important;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .text-right {
+            text-align: right;
+        }
+
+        .report-table .statement-ytd td:nth-child(6) {
+            padding: 0 0 0 10px;
+        }
+
+
+        .text-bold {
+            font-weight: bold !important;
+        }
+
+        .justify-between {
+            justify-content: space-between;
+        }
+
+        .justify-center {
+            justify-content: center;
+        }
+
+        .justify-start {
+            justify-content: start;
+        }
+
+        .justify-end {
+            justify-content: end;
+        }
+
+        .underline {
+            text-decoration-line: underline;
+        }
+
+        .items-start {
+            align-items: flex-start;
+        }
+
+        .items-center {
+            align-items: center;
+        }
+
+        .text-left {
+            text-align: left;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .text-right {
+            text-align: right;
+        }
+
+        .font-bold {
+            font-weight: 700;
+        }
+
+        .font-12 {
+            font-size: 12px;
+        }
+
+        .font-14 {
+            font-size: 14px;
+        }
+
+        .font-16 {
+            font-size: 16px;
+        }
+
+        .font-18 {
+            font-size: 18px;
+        }
+
+        .font-20 {
+            font-size: 20px;
+        }
+
+        .font-22 {
+            font-size: 22px;
+        }
+
+        .font-24 {
+            font-size: 24px;
+        }
+
+        .underline {
+            text-decoration-line: underline;
+        }
+
+        .italic {
+            font-style: italic;
+        }
+
+        .gap-3 {
+            gap: 0.75rem;
+        }
+
+        .gap-4 {
+            gap: 0.75rem !important;
+        }
+
+        .gap-5 {
+            gap: 1.25rem;
+        }
+
+        .font-light {
+            font-weight: 300;
+        }
+
+        .font-color {
+            color: #333333 !important
+        }
+
+        .w-\[285px\] {
+            width: 285px;
+        }
+
+        .h-\[19px\] {
+            height: 19px;
+        }
+
+        .right-0 {
+            right: 0;
+        }
+
+        .top-0 {
+            top: 0;
+        }
+
+        .absolute {
+            position: absolute;
+        }
+
+        .w-\[370px\] {
+            width: 370px;
+        }
+
+        .h-\[20px\] {
+            height: 20px;
+        }
+
+        .right-0 {
+            right: 0;
+        }
+
+        .top-0 {
+            top: 0;
+        }
+
+        .absolute {
+            position: absolute;
+        }
+
+        .items-end {
+            align-items: flex-end;
+        }
+
+        .typo-11-600 {
+            font-size: 11px;
+            font-weight: 600;
+        }
+
+        .typo-9-600 {
+            font-size: 9px;
+            font-weight: 600;
+        }
+
+        .max-w-\[45px\] {
+            max-width: 50px;
+        }
+
+        .w-\[90px\] {
+            width: 90px;
+        }
+
+        .h-\[18px\] {
+            height: 18px;
+        }
+
+        .report-table {
+            border-collapse: collapse;
+        }
+
+        .typo-13-600 {
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .typo-13 {
+            font-size: 13px;
+        }
+
+        .gap-2 {
+            gap: 0.5rem;
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        .w-full {
+            width: 100%;
+        }
+
+        .flex-col {
+            flex-direction: column;
+        }
+
+        .gap-1 {
+            gap: 0.25rem;
+        }
+
+        .flex-col {
+            flex-direction: column;
+        }
+
+        .w-full {
+            width: 100%;
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        .max-w-sm {
+            max-width: 24rem;
+        }
+
+        .w-full {
+            width: 100%;
+        }
+
+        .border {
+            border-width: 1px;
+        }
+
+        .w-\[90px\] {
+            width: 90px;
+        }
+
+        .gap-1 {
+            gap: 0.25rem;
+        }
+
+        .justify-between {
+            justify-content: space-between;
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        .h-\[18px\] {
+            height: 18px;
+        }
+    </style>
+</head>
+
+<body style="font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont">
+
+    <img src="https://hub-dev.tgg-accounting.com/assets/images/svg/common-page-light.svg" alt="common-page-light-svg"
+        class="absolute top-0 right-0 w-[285px] h-[19px]">
+    <img src="https://hub-dev.tgg-accounting.com/assets/images/svg/common-page-dark.svg" alt="common-page-dark-svg"
+        class="absolute top-0 right-0 w-[370px] h-[20px]">
+    <div class="header">
+        <div class="typo-12 flex flex-col text-bold">
+            <span>Notes to the Financial Statements</span>
+            <span class="font-light">Period Ending 30 November, 2022</span>
+
+        </div>
+        <div style="margin-top: 10px" class="flex flex-col items-end">
+            <img src="https://tgg-storage-public-dev.s3.amazonaws.com/a3966b86-267e-4b17-add9-50c9ac743994blob"
+                class="h-[18px] object-contain" alt="client logo">
+        </div>
+    </div>
+
+    <div class="flex w-full gap-4">
+        <div class="flex-shrink-0 hover:underline cursor-pointer typo-11-600 w-full max-w-[45px]">
+            Note 1
+        </div>
+        <div class="flex flex-col w-full">
+            <div class="flex flex-col gap-2 w-full">
+                <div class="typo-11-600">Cash</div>
+                <div class="typo-11">In publishing and graphic design, Lorem ipsum is a placeholder text commonly used
+                    to
+                    demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem
+                    ipsum may be used as a placeholder before final copy is available. It is also used to temporarily
+                    replace text in a process called greeking, which allows designers to consider the form of a webpage
+                    or
+                    publication</div>
+
+
+                <table class="w-full report-table" style="font-size: 9px;">
+                    <tr class="statement-ytd">
+                        <td colspan="0" class="first-cell "
+                            style="font-weight: bold;background: #F4F5F6;border-bottom: 1px solid #B1B5C3;border-top: 1px solid #B1B5C3;">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    GL Account Name
+                                </span>
+                            </div>
+                        </td>
+                        <td colspan="0" class="text-right "
+                            style="font-weight: bold;background: #F4F5F6;border-bottom: 1px solid #B1B5C3;border-top: 1px solid #B1B5C3;">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    Nov
+                                </span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="statement-ytd">
+                        <td colspan="0" class="first-cell " style="">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    Cash:Petty Cash:Marina
+                                </span>
+                            </div>
+                        </td>
+                        <td colspan="0" class="text-right " style="">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    1260
+                                </span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="statement-ytd">
+                        <td colspan="0" class="first-cell " style="">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    Cash:Petty Cash:Main Office
+                                </span>
+                            </div>
+                        </td>
+                        <td colspan="0" class="text-right " style="">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    1235
+                                </span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="statement-ytd">
+                        <td colspan="0" class="first-cell " style="">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    Net Fixed Assets:Building
+                                </span>
+                            </div>
+                        </td>
+                        <td colspan="0" class="text-right " style="">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    3128100
+                                </span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="statement-ytd">
+                        <td colspan="0" class="first-cell " style="">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    Net Fixed Assets:Furniture &amp; Fixtures
+                                </span>
+                            </div>
+                        </td>
+                        <td colspan="0" class="text-right " style="">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    290906
+                                </span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="statement-ytd">
+                        <td colspan="0" class="first-cell " style="">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    Net Fixed Assets:Land
+                                </span>
+                            </div>
+                        </td>
+                        <td colspan="0" class="text-right " style="">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    4681454
+                                </span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="statement-ytd">
+                        <td colspan="0" class="first-cell " style="">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    Net Fixed Assets:Leasehold Improvements
+                                </span>
+                            </div>
+                        </td>
+                        <td colspan="0" class="text-right " style="">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    3321226
+                                </span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="statement-ytd">
+                        <td colspan="0" class="first-cell " style="">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    Net Fixed Assets:Machinery &amp; Equipment
+                                </span>
+                            </div>
+                        </td>
+                        <td colspan="0" class="text-right " style="">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    3288494
+                                </span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="statement-ytd">
+                        <td colspan="0" class="first-cell " style="">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    Net Fixed Assets:Vehicles
+                                </span>
+                            </div>
+                        </td>
+                        <td colspan="0" class="text-right " style="">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    357052
+                                </span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="statement-ytd">
+                        <td colspan="0" class="first-cell full max-w-sm" style="font-weight: bold; background: #f4f5f6;
+                            border-bottom: 1px solid #b1b5c3; border-top: 1px solid #b1b5c3;"
+                            style="font-weight: bold;background: #F4F5F6;border-bottom: 1px solid #B1B5C3;border-top: 1px solid #B1B5C3;">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    Total Cash
+                                </span>
+                            </div>
+                        </td>
+                        <td colspan="0" class="text-right w-[90px] border " style="
+                            font-weight: bold;
+                            background: #f4f5f6;
+                            border-bottom: 1px solid #b1b5c3;
+                            border-top: 1px solid #b1b5c3;
+                          ">
+
+                            <div class="flex justify-between gap-1">
+
+
+                                <span>$</span>
+
+                                <span>
+                                    15069726
+                                </span>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+        </div>
+    </div>
+    <div class="flex w-full gap-4">
+        <div class="flex-shrink-0 hover:underline cursor-pointer typo-11-600 w-full max-w-[45px]">
+            Note 3
+        </div>
+        <div class="flex flex-col w-full">
+            <div class="flex flex-col w-full gap-1">
+                <div class="typo-11-600">Notes Receivable, Short-Term</div>
+                <div class="typo-11"></div>
+                <table class="w-full report-table" style="font-size: 9px;">
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="flex w-full gap-4">
+        <div class="flex-shrink-0 hover:underline cursor-pointer typo-11-600 w-full max-w-[45px]">
+            Note 4
+        </div>
+        <div class="flex flex-col w-full">
+            <div class="flex flex-col gap-1 w-full">
+                <div class="typo-11-600">Deposits, Short-Term</div>
+                <div class="typo-11">Short-term message</div>
+
+                <table class="w-full report-table" style="font-size: 9px;">
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="flex w-full gap-4">
+        <div class="flex-shrink-0 hover:underline cursor-pointer typo-11-600 w-full max-w-[45px]">
+            Note 4
+        </div>
+        <div class="flex flex-col w-full">
+            <div class="flex flex-col gap-1 w-full">
+                <div class="typo-11-600">Deposits, Long-Term</div>
+                <div class="typo-11">Long term</div>
+
+                <table class="w-full report-table" style="font-size: 9px;">
+                </table>
+            </div>
+
+        </div>
+    </div>
+    <div class="flex w-full gap-4">
+        <div class="flex-shrink-0 hover:underline cursor-pointer typo-11-600 w-full max-w-[45px]">
+            Note 6
+        </div>
+        <div class="flex flex-col w-full">
+            <div class="flex flex-col gap-1 w-full">
+                <div class="typo-11-600">Marketable Securities</div>
+                <div class="typo-11"></div>
+
+                <table class="w-full report-table" style="font-size: 9px;">
+                    <tr class="statement-ytd">
+                        <td colspan="0" class="first-cell "
+                            style="font-weight: bold;background: #F4F5F6;border-bottom: 1px solid #B1B5C3;border-top: 1px solid #B1B5C3;">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    GL Account Name
+                                </span>
+                            </div>
+                        </td>
+                        <td colspan="0" class="text-right w-[90px] border"
+                            style="font-weight: bold;background: #F4F5F6;border-bottom: 1px solid #B1B5C3;border-top: 1px solid #B1B5C3;">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    Aug
+                                </span>
+                            </div>
+                        </td>
+                        <td colspan="0" class="text-right w-[90px] border"
+                            style="font-weight: bold;background: #F4F5F6;border-bottom: 1px solid #B1B5C3;border-top: 1px solid #B1B5C3;">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    Sep
+                                </span>
+                            </div>
+                        </td>
+                        <td colspan="0" class="text-right w-[90px] border"
+                            style="font-weight: bold;background: #F4F5F6;border-bottom: 1px solid #B1B5C3;border-top: 1px solid #B1B5C3;">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    Oct
+                                </span>
+                            </div>
+                        </td>
+                        <td colspan="0" class="text-right w-[90px] border"
+                            style="font-weight: bold;background: #F4F5F6;border-bottom: 1px solid #B1B5C3;border-top: 1px solid #B1B5C3;">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    Nov
+                                </span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="statement-ytd">
+                        <td colspan="0" class="first-cell " style="">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    Cash:BOH Saving Sweep x3153
+                                </span>
+                            </div>
+                        </td>
+                        <td colspan="0" class="text-right " style="">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    4090125
+                                </span>
+                            </div>
+                        </td>
+                        <td colspan="0" class="text-right " style="">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    4228183
+                                </span>
+                            </div>
+                        </td>
+                        <td colspan="0" class="text-right " style="">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    4452688
+                                </span>
+                            </div>
+                        </td>
+                        <td colspan="0" class="text-right " style="">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    4204538
+                                </span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="statement-ytd">
+                        <td colspan="0" class="first-cell "
+                            style="font-weight: bold;background: #F4F5F6;border-bottom: 1px solid #B1B5C3;border-top: 1px solid #B1B5C3;">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    Total Marketable Securities
+                                </span>
+                            </div>
+                        </td>
+                        <td colspan="0" class="text-right "
+                            style="font-weight: bold;background: #F4F5F6;border-bottom: 1px solid #B1B5C3;border-top: 1px solid #B1B5C3;">
+
+                            <div class="flex justify-between">
+
+
+                                <span>$</span>
+
+                                <span>
+                                    4090125
+                                </span>
+                            </div>
+                        </td>
+                        <td colspan="0" class="text-right "
+                            style="font-weight: bold;background: #F4F5F6;border-bottom: 1px solid #B1B5C3;border-top: 1px solid #B1B5C3;">
+
+                            <div class="flex justify-between">
+
+
+                                <span>$</span>
+
+                                <span>
+                                    4228183
+                                </span>
+                            </div>
+                        </td>
+                        <td colspan="0" class="text-right "
+                            style="font-weight: bold;background: #F4F5F6;border-bottom: 1px solid #B1B5C3;border-top: 1px solid #B1B5C3;">
+
+                            <div class="flex justify-between">
+
+
+                                <span>$</span>
+
+                                <span>
+                                    4452688
+                                </span>
+                            </div>
+                        </td>
+                        <td colspan="0" class="text-right "
+                            style="font-weight: bold;background: #F4F5F6;border-bottom: 1px solid #B1B5C3;border-top: 1px solid #B1B5C3;">
+
+                            <div class="flex justify-between">
+
+
+                                <span>$</span>
+
+                                <span>
+                                    4204538
+                                </span>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+
+            </div>
+        </div>
+    </div>
+    <div class="flex w-full gap-4">
+        <div class="flex-shrink-0 hover:underline cursor-pointer typo-11-600 w-full max-w-[45px]">
+            Note 7
+        </div>
+        <div class="flex flex-col w-full  gap-1">
+            <div class="typo-11-600">Accounts Receivable, Net</div>
+            <div class="typo-11"></div>
+
+            <table class="w-full report-table" style="font-size: 9px;">
+            </table>
+
+        </div>
+    </div>
+    <div class="flex w-full gap-4">
+        <div class="flex-shrink-0 hover:underline cursor-pointer typo-11-600 w-full max-w-[45px]">
+            Note 9
+        </div>
+        <div class="flex flex-col w-full">
+            <div class="flex flex-col gap-1 w-full">
+                <div class="typo-11-600">Accrued Revenue</div>
+                <div class="typo-11"></div>
+
+                <table class="w-full report-table" style="font-size: 9px;">
+                    <tr class="statement-ytd">
+                        <td colspan="0" class="first-cell w-full max-w-sm border"
+                            style="font-weight: bold;background: #F4F5F6;border-bottom: 1px solid #B1B5C3;border-top: 1px solid #B1B5C3;">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    GL Account Name
+                                </span>
+                            </div>
+                        </td>
+                        <td colspan="0" class="text-right w-[90px] border "
+                            style="font-weight: bold;background: #F4F5F6;border-bottom: 1px solid #B1B5C3;border-top: 1px solid #B1B5C3;">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    Aug
+                                </span>
+                            </div>
+                        </td>
+                        <td colspan="0" class="text-right w-[90px] border "
+                            style="font-weight: bold;background: #F4F5F6;border-bottom: 1px solid #B1B5C3;border-top: 1px solid #B1B5C3;">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    Sep
+                                </span>
+                            </div>
+                        </td>
+                        <td colspan="0" class="text-right w-[90px] border "
+                            style="font-weight: bold;background: #F4F5F6;border-bottom: 1px solid #B1B5C3;border-top: 1px solid #B1B5C3;">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    Oct
+                                </span>
+                            </div>
+                        </td>
+                        <td colspan="0" class="text-right w-[90px] border "
+                            style="font-weight: bold;background: #F4F5F6;border-bottom: 1px solid #B1B5C3;border-top: 1px solid #B1B5C3;">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    Nov
+                                </span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="statement-ytd">
+                        <td colspan="0" class="first-cell " style="">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    Accrued Expense
+                                </span>
+                            </div>
+                        </td>
+                        <td colspan="0" class="text-right " style="">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    -24057
+                                </span>
+                            </div>
+                        </td>
+                        <td colspan="0" class="text-right " style="">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    -25600
+                                </span>
+                            </div>
+                        </td>
+                        <td colspan="0" class="text-right " style="">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    -27182
+                                </span>
+                            </div>
+                        </td>
+                        <td colspan="0" class="text-right " style="">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    -28725
+                                </span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="statement-ytd">
+                        <td colspan="0" class="first-cell "
+                            style="font-weight: bold;background: #F4F5F6;border-bottom: 1px solid #B1B5C3;border-top: 1px solid #B1B5C3;">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    Total Accrued Revenue
+                                </span>
+                            </div>
+                        </td>
+                        <td colspan="0" class="text-right "
+                            style="font-weight: bold;background: #F4F5F6;border-bottom: 1px solid #B1B5C3;border-top: 1px solid #B1B5C3;">
+
+                            <div class="flex justify-between">
+
+
+                                <span>$</span>
+
+                                <span>
+                                    -24057
+                                </span>
+                            </div>
+                        </td>
+                        <td colspan="0" class="text-right "
+                            style="font-weight: bold;background: #F4F5F6;border-bottom: 1px solid #B1B5C3;border-top: 1px solid #B1B5C3;">
+
+                            <div class="flex justify-between gap-1">
+
+
+                                <span>$</span>
+
+                                <span>
+                                    -25600
+                                </span>
+                            </div>
+                        </td>
+                        <td colspan="0" class="text-right "
+                            style="font-weight: bold;background: #F4F5F6;border-bottom: 1px solid #B1B5C3;border-top: 1px solid #B1B5C3;">
+
+                            <div class="flex justify-between gap-1">
+
+
+                                <span>$</span>
+
+                                <span>
+                                    -27182
+                                </span>
+                            </div>
+                        </td>
+                        <td colspan="0" class="text-right "
+                            style="font-weight: bold;background: #F4F5F6;border-bottom: 1px solid #B1B5C3;border-top: 1px solid #B1B5C3;">
+
+                            <div class="flex justify-between gap-1">
+
+
+                                <span>$</span>
+
+                                <span>
+                                    -28725
+                                </span>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+        </div>
+    </div>
+    <div class="flex w-full gap-4">
+        <div class="flex-shrink-0 hover:underline cursor-pointer typo-11-600 w-full max-w-[45px]">
+            Note 22
+        </div>
+        <div class="flex flex-col w-full">
+            <div class="flex flex-col w-full gap-1">
+                <div class="typo-11-600">Distributions</div>
+                <div class="typo-11"></div>
+
+                <table class="w-full report-table" style="font-size: 9px;">
+                    <tr class="statement-ytd">
+                        <td colspan="0" class="first-cell "
+                            style="font-weight: bold;background: #F4F5F6;border-bottom: 1px solid #B1B5C3;border-top: 1px solid #B1B5C3;">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    GL Account Name
+                                </span>
+                            </div>
+                        </td>
+                        <td colspan="0" class="text-right w-[90px] border"
+                            style="font-weight: bold;background: #F4F5F6;border-bottom: 1px solid #B1B5C3;border-top: 1px solid #B1B5C3;">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    Description
+                                </span>
+                            </div>
+                        </td>
+                        <td colspan="0" class="text-right w-[90px] border"
+                            style="font-weight: bold;background: #F4F5F6;border-bottom: 1px solid #B1B5C3;border-top: 1px solid #B1B5C3;">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    Nov
+                                </span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="statement-ytd">
+                        <td colspan="0" class="first-cell " style="">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    Dividends
+                                </span>
+                            </div>
+                        </td>
+                        <td colspan="0" class="text-right " style="">
+
+                            <div class="">
+
+
+
+                                <span>
+
+                                </span>
+                            </div>
+                        </td>
+                        <td colspan="0" class="text-right " style="">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    -1911649
+                                </span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="statement-ytd">
+                        <td colspan="0" class="first-cell "
+                            style="font-weight: bold;background: #F4F5F6;border-bottom: 1px solid #B1B5C3;border-top: 1px solid #B1B5C3;">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    Total Distributions
+                                </span>
+                            </div>
+                        </td>
+                        <td colspan="0" class="text-right "
+                            style="font-weight: bold;background: #F4F5F6;border-bottom: 1px solid #B1B5C3;border-top: 1px solid #B1B5C3;">
+
+                            <div class="">
+
+
+
+                                <span>
+
+                                </span>
+                            </div>
+                        </td>
+                        <td colspan="0" class="text-right "
+                            style="font-weight: bold;background: #F4F5F6;border-bottom: 1px solid #B1B5C3;border-top: 1px solid #B1B5C3;">
+
+                            <div class="flex justify-between gap-1">
+
+
+                                <span>$</span>
+
+                                <span>
+                                    -1911649
+                                </span>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+        </div>
+    </div>
+    <div class="flex w-full gap-4">
+        <div class="flex-shrink-0 hover:underline cursor-pointer typo-11-600 w-full max-w-[45px]">
+            Note 34
+        </div>
+        <div class="flex flex-col w-full">
+            <div class="flex flex-col w-full gap-1">
+                <div class="typo-11-600">Insurance</div>
+                <div class="typo-11"></div>
+
+                <table class="w-full report-table" style="font-size: 9px;">
+                    <tr class="statement-ytd">
+                        <td colspan="0" class="first-cell "
+                            style="font-weight: bold;background: #F4F5F6;border-bottom: 1px solid #B1B5C3;border-top: 1px solid #B1B5C3;">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    GL Account Name
+                                </span>
+                            </div>
+                        </td>
+                        <td colspan="0" class="text-right w-[90px] border "
+                            style="font-weight: bold;background: #F4F5F6;border-bottom: 1px solid #B1B5C3;border-top: 1px solid #B1B5C3;">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    Aug
+                                </span>
+                            </div>
+                        </td>
+                        <td colspan="0" class="text-right w-[90px] border "
+                            style="font-weight: bold;background: #F4F5F6;border-bottom: 1px solid #B1B5C3;border-top: 1px solid #B1B5C3;">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    Sep
+                                </span>
+                            </div>
+                        </td>
+                        <td colspan="0" class="text-right w-[90px] border "
+                            style="font-weight: bold;background: #F4F5F6;border-bottom: 1px solid #B1B5C3;border-top: 1px solid #B1B5C3;">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    Oct
+                                </span>
+                            </div>
+                        </td>
+                        <td colspan="0" class="text-right w-[90px] border "
+                            style="font-weight: bold;background: #F4F5F6;border-bottom: 1px solid #B1B5C3;border-top: 1px solid #B1B5C3;">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    Nov
+                                </span>
+                            </div>
+                        </td>
+                        <td colspan="0" class="text-right w-[90px] border "
+                            style="font-weight: bold;background: #F4F5F6;border-bottom: 1px solid #B1B5C3;border-top: 1px solid #B1B5C3;">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    YTD
+                                </span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="statement-ytd">
+                        <td colspan="0" class="first-cell " style="">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    Insurance Expense:Property Insurance
+                                </span>
+                            </div>
+                        </td>
+                        <td colspan="0" class="text-right " style="">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    14339
+                                </span>
+                            </div>
+                        </td>
+                        <td colspan="0" class="text-right " style="">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    7719
+                                </span>
+                            </div>
+                        </td>
+                        <td colspan="0" class="text-right " style="">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    7719
+                                </span>
+                            </div>
+                        </td>
+                        <td colspan="0" class="text-right " style="">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    7719
+                                </span>
+                            </div>
+                        </td>
+                        <td colspan="0" class="text-right " style="">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    83835
+                                </span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="statement-ytd">
+                        <td colspan="0" class="first-cell " style="">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    Insurance Expense:General Liability Insurance
+                                </span>
+                            </div>
+                        </td>
+                        <td colspan="0" class="text-right " style="">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    5836
+                                </span>
+                            </div>
+                        </td>
+                        <td colspan="0" class="text-right " style="">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    6196
+                                </span>
+                            </div>
+                        </td>
+                        <td colspan="0" class="text-right " style="">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    6196
+                                </span>
+                            </div>
+                        </td>
+                        <td colspan="0" class="text-right " style="">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    1356
+                                </span>
+                            </div>
+                        </td>
+                        <td colspan="0" class="text-right " style="">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    60437
+                                </span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="statement-ytd">
+                        <td colspan="0" class="first-cell " style="">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    Insurance Expense:Keyman Insurance
+                                </span>
+                            </div>
+                        </td>
+                        <td colspan="0" class="text-right " style="">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    1165
+                                </span>
+                            </div>
+                        </td>
+                        <td colspan="0" class="text-right " style="">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    1165
+                                </span>
+                            </div>
+                        </td>
+                        <td colspan="0" class="text-right " style="">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    1165
+                                </span>
+                            </div>
+                        </td>
+                        <td colspan="0" class="text-right " style="">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    1165
+                                </span>
+                            </div>
+                        </td>
+                        <td colspan="0" class="text-right " style="">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    12820
+                                </span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="statement-ytd">
+                        <td colspan="0" class="first-cell " style="">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    Insurance Expense:Other Insurance
+                                </span>
+                            </div>
+                        </td>
+                        <td colspan="0" class="text-right " style="">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    -289
+                                </span>
+                            </div>
+                        </td>
+                        <td colspan="0" class="text-right " style="">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    -289
+                                </span>
+                            </div>
+                        </td>
+                        <td colspan="0" class="text-right " style="">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    -289
+                                </span>
+                            </div>
+                        </td>
+                        <td colspan="0" class="text-right " style="">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    -289
+                                </span>
+                            </div>
+                        </td>
+                        <td colspan="0" class="text-right " style="">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    -2293
+                                </span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="statement-ytd">
+                        <td colspan="0" class="first-cell " style="">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    Fees &amp; Penalties:Bank Fees
+                                </span>
+                            </div>
+                        </td>
+                        <td colspan="0" class="text-right " style="">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    220
+                                </span>
+                            </div>
+                        </td>
+                        <td colspan="0" class="text-right " style="">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    227
+                                </span>
+                            </div>
+                        </td>
+                        <td colspan="0" class="text-right " style="">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    141
+                                </span>
+                            </div>
+                        </td>
+                        <td colspan="0" class="text-right " style="">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    119
+                                </span>
+                            </div>
+                        </td>
+                        <td colspan="0" class="text-right " style="">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    2054
+                                </span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="statement-ytd">
+                        <td colspan="0" class="first-cell " style="">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    Insurance Expense:Hull Protection Insurance
+                                </span>
+                            </div>
+                        </td>
+                        <td colspan="0" class="text-right " style="">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    4011
+                                </span>
+                            </div>
+                        </td>
+                        <td colspan="0" class="text-right " style="">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    8491
+                                </span>
+                            </div>
+                        </td>
+                        <td colspan="0" class="text-right " style="">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    4480
+                                </span>
+                            </div>
+                        </td>
+                        <td colspan="0" class="text-right " style="">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    4480
+                                </span>
+                            </div>
+                        </td>
+                        <td colspan="0" class="text-right " style="">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    49789
+                                </span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="statement-ytd">
+                        <td colspan="0" class="first-cell " style="">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    Insurance Expense:Auto Insurance
+                                </span>
+                            </div>
+                        </td>
+                        <td colspan="0" class="text-right " style="">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    686
+                                </span>
+                            </div>
+                        </td>
+                        <td colspan="0" class="text-right " style="">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    686
+                                </span>
+                            </div>
+                        </td>
+                        <td colspan="0" class="text-right " style="">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    686
+                                </span>
+                            </div>
+                        </td>
+                        <td colspan="0" class="text-right " style="">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    686
+                                </span>
+                            </div>
+                        </td>
+                        <td colspan="0" class="text-right " style="">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    7455
+                                </span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="statement-ytd">
+                        <td colspan="0" class="first-cell " style="">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    Labor Expense:Employee Benefits:Employee Benefits TDI Insurance
+                                </span>
+                            </div>
+                        </td>
+                        <td colspan="0" class="text-right " style="">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    175
+                                </span>
+                            </div>
+                        </td>
+                        <td colspan="0" class="text-right " style="">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    170
+                                </span>
+                            </div>
+                        </td>
+                        <td colspan="0" class="text-right " style="">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    176
+                                </span>
+                            </div>
+                        </td>
+                        <td colspan="0" class="text-right " style="">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    165
+                                </span>
+                            </div>
+                        </td>
+                        <td colspan="0" class="text-right " style="">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    1875
+                                </span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="statement-ytd">
+                        <td colspan="0" class="first-cell " style="">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    Other Expense:Bad Debt Expense
+                                </span>
+                            </div>
+                        </td>
+                        <td colspan="0" class="text-right " style="">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    0
+                                </span>
+                            </div>
+                        </td>
+                        <td colspan="0" class="text-right " style="">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    497
+                                </span>
+                            </div>
+                        </td>
+                        <td colspan="0" class="text-right " style="">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    0
+                                </span>
+                            </div>
+                        </td>
+                        <td colspan="0" class="text-right " style="">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    0
+                                </span>
+                            </div>
+                        </td>
+                        <td colspan="0" class="text-right " style="">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    -2496
+                                </span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="statement-ytd">
+                        <td colspan="0" class="first-cell " style="">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    Insurance Expense:Umbrella Insurance
+                                </span>
+                            </div>
+                        </td>
+                        <td colspan="0" class="text-right " style="">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    3740
+                                </span>
+                            </div>
+                        </td>
+                        <td colspan="0" class="text-right " style="">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    3912
+                                </span>
+                            </div>
+                        </td>
+                        <td colspan="0" class="text-right " style="">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    3912
+                                </span>
+                            </div>
+                        </td>
+                        <td colspan="0" class="text-right " style="">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    2464
+                                </span>
+                            </div>
+                        </td>
+                        <td colspan="0" class="text-right " style="">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    40207
+                                </span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="statement-ytd">
+                        <td colspan="0" class="first-cell " style="">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    Insurance Expense:Equipment Breakdown Insurance
+                                </span>
+                            </div>
+                        </td>
+                        <td colspan="0" class="text-right " style="">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    92
+                                </span>
+                            </div>
+                        </td>
+                        <td colspan="0" class="text-right " style="">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    92
+                                </span>
+                            </div>
+                        </td>
+                        <td colspan="0" class="text-right " style="">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    92
+                                </span>
+                            </div>
+                        </td>
+                        <td colspan="0" class="text-right " style="">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    92
+                                </span>
+                            </div>
+                        </td>
+                        <td colspan="0" class="text-right " style="">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    998
+                                </span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="statement-ytd">
+                        <td colspan="0" class="first-cell "
+                            style="font-weight: bold;background: #F4F5F6;border-bottom: 1px solid #B1B5C3;border-top: 1px solid #B1B5C3;">
+
+                            <div class="">
+
+
+
+                                <span>
+                                    Total Insurance
+                                </span>
+                            </div>
+                        </td>
+                        <td colspan="0" class="text-right "
+                            style="font-weight: bold;background: #F4F5F6;border-bottom: 1px solid #B1B5C3;border-top: 1px solid #B1B5C3;">
+
+                            <div class="flex justify-between gap-1">
+
+
+                                <span>$</span>
+
+                                <span>
+                                    29976
+                                </span>
+                            </div>
+                        </td>
+                        <td colspan="0" class="text-right "
+                            style="font-weight: bold;background: #F4F5F6;border-bottom: 1px solid #B1B5C3;border-top: 1px solid #B1B5C3;">
+
+                            <div class="flex justify-between gap-1">
+
+
+                                <span>$</span>
+
+                                <span>
+                                    28867
+                                </span>
+                            </div>
+                        </td>
+                        <td colspan="0" class="text-right "
+                            style="font-weight: bold;background: #F4F5F6;border-bottom: 1px solid #B1B5C3;border-top: 1px solid #B1B5C3;">
+
+                            <div class="flex justify-between gap-1">
+
+
+                                <span>$</span>
+
+                                <span>
+                                    24278
+                                </span>
+                            </div>
+                        </td>
+                        <td colspan="0" class="text-right "
+                            style="font-weight: bold;background: #F4F5F6;border-bottom: 1px solid #B1B5C3;border-top: 1px solid #B1B5C3;">
+
+                            <div class="flex justify-between gap-1">
+
+
+                                <span>$</span>
+
+                                <span>
+                                    17958
+                                </span>
+                            </div>
+                        </td>
+                        <td colspan="0" class="text-right "
+                            style="font-weight: bold;background: #F4F5F6;border-bottom: 1px solid #B1B5C3;border-top: 1px solid #B1B5C3;">
+
+                            <div class="flex justify-between gap-1">
+
+
+                                <span>$</span>
+
+                                <span>
+                                    254680
+                                </span>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
